@@ -12,3 +12,9 @@ O exame Associate Cloud Engineer avalia as seguintes habilidades:
 * implementar uma solução de nuvem
 * garantir a operação de uma solução de nuvem
 * configurar o acesso e a segurança
+
+_Source: https://cloud.google.com/certification/cloud-engineer_
+
+# Recursos e Treinamentos
+
+Cousera: https://www.coursera.org/specializations/gcp-architecture
