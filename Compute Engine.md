@@ -1,12 +1,9 @@
-Work Itens Associados: 
-#131
-#138
 
 Como todo recurso no GCP é associado a um projeto, a primeira coisa a ser feita é validar se já foi criado um Projeto e se existe uma conta de faturamento associada.
 
 `gcloud beta billing projects link gcp-bigdata --billing-acount=XXXXXX-XXXXXX-XXXXXX`
 
-##Criação de VM
+## Criação de VM
 1. No console do Google Cloud Shell, digite: `gcloud compute instances create another-instance --zone us-central1-a`
 1. Utilize o comando " gcloud compute instances create --help" caso tenha dúvidas na hora da criação.
 	
@@ -24,9 +21,9 @@ Para validação da criação do disco, utilize: `gcloud compute disks list`. Ap
 Uma outra opção é realizar via SDK: `gcloud compute instances attach-disk another-instance --disk disk-lab --zone us-east1-c` 
 
 
-##Gerenciamento de Chaves SSH
+## Gerenciamento de Chaves SSH
 
-##Cotas
+## Cotas
 
 A política de cotas impõe o limite de recursos(projeto) que podem ser utilizados, com o propósito de estabelecer controle sobre as implementações e  garantia de uso não devido. 
 
@@ -38,7 +35,7 @@ A política de cotas impõe o limite de recursos(projeto) que podem ser utilizad
 
 > https://cloud.google.com/compute/quotas?hl=pt-br
 
-##Realocação de Instância
+## Realocação de Instância
 
 Para realizar a migração de uma instância "a quente" para outra zona, utilize a operação de `move` para a zona de destino.
 Ex: `gcloud compute instances move --zone us-east1-c lab-gce --destination-zone=us-east1-a`
@@ -47,7 +44,7 @@ Ex: `gcloud compute instances move --zone us-east1-c lab-gce --destination-zone=
 
 Uma outra estratégia é a de armazenar os dicos de uma instância existente e criar uma máqina do zero, a partir dos discos pré-existentes.
 
-##AutoScaling
+## AutoScaling
 
 O primeiro passo para configurar o auto provisionamento é criar um Template que inclua scripts de inicialização e desligamento para automatizar tarefas de instalação de software, logs e entre outros.
 Após isso, É criar um grupo de instâncias gerenciadas e configurar o auto provisionamento juntamente com suas políticas.
@@ -76,10 +73,10 @@ Após isso, É criar um grupo de instâncias gerenciadas e configurar o auto pro
 ![scale-in.png](/.attachments/scale-in-78d071f0-a288-4322-a50f-e02adf24f238.png)
 
 
-##AutoHealing
+## AutoHealing
 
 
-##StackDriver
+## StackDriver
 
 O Google Stackdriver oferece funcionalidades de monitoramento, geração de registros e diagnóstico. Ele proporciona insights sobre a integridade, o desempenho e a disponibilidade de aplicativos com tecnologia de nuvem, agilizando a detecção e correção de problemas.
 
