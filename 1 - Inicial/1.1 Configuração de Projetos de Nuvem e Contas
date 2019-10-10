@@ -1,0 +1,52 @@
+**Projeto**
+
+Um projeto no GCP é a maneira no qual, os recursos são agrupados e organizados. Os projetos podem ser listados, através do comando: `gcloud projects list`.
+
+Um projeto pode ser criado através da API, Cloud SDK e via interface gráfica. 
+
+Exemplo de Criação:  
+`gcloud projects create --name=lab-gcp`
+
+
+Por padrão, todas as APIs são habilitadas quando um projeto é criado. Para desabilitar, basta passar o parâmetro `--no-enable-cloud-apis` no momento da criação.
+
+**APIs**
+
+As APIs que estão habilitadas em um projeto, podem ser verificadas via GUI ou CLI: `gcloud services list`.
+
+Para habilitar, basta utilizar o comando: `gcloud service enable servicexyz` 
+
+### **Segurança**
+
+De acordo com o gerenciamento de identidade e acesso, as restrições de segurança são realizadas, a partir de uma Estrutura de decisão: Quem acessa o que e qual recurso é aplicado. 
+
+Fonte de Usuários:
+- Gmail
+- Google Groups
+- Contas de Serviço
+- G Suite
+- Cloud Identity
+
+Além disso, exite a possibilidade de utilizar o Google Cloud Directory Sync.  No GCP, Existem os três papéis abaixo:
+
+Primitivo(Primitive) - Os papéis primitivos são aplicados a um **projeto** e podem afetar a todos os recursos.  Que trazem os seguintes papeis por padrão.
+	• Owner
+	• Editor
+	• Viewer
+	• Billing Administrator
+
+
+Predefinido (Predefined) - os papéis que são predefinidos oferecem conjuntos que são aplicados a nível de recursos e geralmente, estão associados a um tipo em específico de escrita. 
+
+Customizado (Custom) - Os papéis customizados liberam o poder da abstração, trazendo o conceito de menor privilégio de forma ampla. Como por exemplo, segmentando em qual máquina um usuário pode listar, criar ou administrar recursos.
+
+Em casos onde seja necessário liberar uma permissão a um recurso e não um usuário. Utilize as contas de serviço, para tal fim. 
+
+
+**StackDriver**
+
+Stackdriver é uma suíte de "observability", usada para monitoramento, log, debug, agregação de erros e entre outros. 
+
+Para Ativar, clique Sobre a opção Stackdriver, selecione **"Monitoring"** e preencha as informações iniciais. Como projeto a ser associado, contas de e-mail e etc. 
+
+![image.png](/.attachments/image-2999d756-4f95-4d69-9cd3-ad1cc3a336d9.png)
