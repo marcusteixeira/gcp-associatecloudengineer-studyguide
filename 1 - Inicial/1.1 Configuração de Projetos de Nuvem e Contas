@@ -1,5 +1,3 @@
-
-
 **Projeto**
 
 Um projeto no GCP é a maneira no qual, os recursos são agrupados e organizados. Os projetos podem ser listados, através do comando: `gcloud projects list`.
