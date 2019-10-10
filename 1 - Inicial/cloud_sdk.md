@@ -1,11 +1,13 @@
 O Google Cloud oferece um SDK para manipulação de objetos e tarefas que são realizadas no dia a dia. Isso inclui ferramentas de gerenciamento do App Engine, BigQuery, Kubernertes e entre outros. 
 
 No Cloud Shell, É padrão que venha com o Cloud SDK instalado e configurado. Para instalação em um host personalizado, utilize a documentação abaixo:
+
 > https://cloud.google.com/sdk/install
 
 O SDK também pode ser instalado via Powershell: `Install-Module Google Cloud`
 
 Além disso, também está disponível uma imagem docker "Cloud SDK". 
+
 **Imagem Docker: https://hub.docker.com/r/google/cloud-sdk/**
 
 Ao ser instalado, é disponibilizado as seguintes linhas de comando:
@@ -28,6 +30,7 @@ Para instalar e verificar quais opções estão disponíveis através do SDK, ut
 
 **Configurações Default**
 `gcloud config set compute/zone us-east1-c` | Especifica a zona padrão
+
 `gcloud config set project homelab` | Especifica o projeto padrão
 
 **Alpha e Beta**
@@ -35,6 +38,7 @@ Para instalar e verificar quais opções estão disponíveis através do SDK, ut
 Para funções e recursos que ainda estão em modo beta ou em teste, o GCP oferece alguns comandos para manipulação desses recursos.
 
 Beta: `gcloud components install beta`
+
 Alpha: `gcloud components install alpha`
 
 
